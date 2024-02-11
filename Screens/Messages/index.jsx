@@ -1,10 +1,10 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-export const Home = () => {
+export const Messages = () => {
   return (
     <View>
-      <Text>Ecran de tableau de bord</Text>
+      <Text>Ecran de messageries</Text>
     </View>
   )
 }
