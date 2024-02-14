@@ -1,10 +1,9 @@
 import { View, Text, ScrollView, Image, FlatList, TouchableOpacity } from 'react-native'
 import React from 'react'
-// import FaniryImg from '../../assets/images/faniry.jpg'
+import FaniryImg from '../../assets/images/faniry.jpg'
 import { dashboardStyles } from './style.jsx'
 import { FakeActivity } from '../../fakeData/fakeActivity.jsx'
-// import AgriSvg from '../../assets/images/svg/planting.svg'
-// import Svg, { Circle } from 'react-native-svg';
+import AGRISVG from '../../assets/images/svg/planting.svg'
 
 export const Home = () => {
     return (
@@ -12,7 +11,7 @@ export const Home = () => {
             {/* Début du header */}
             <View style={dashboardStyles.header}>
                 <Text style={dashboardStyles.userName}>Faniriantsoa RANDRIAHARIMINO</Text>
-                {/* <Image source={FaniryImg} style={dashboardStyles.userImg} /> */}
+                <Image source={FaniryImg} style={dashboardStyles.userImg} />
             </View>
             {/* Fin du header */}
 
@@ -26,9 +25,7 @@ export const Home = () => {
                 renderItem={({ item }) => {
                     return (
                         <TouchableOpacity style={dashboardStyles.scrollableListItem}>
-                            {/* <Svg height="50%" width="50%" viewBox="0 0 100 100" >
-                                <Circle cx="50" cy="50" r="50" stroke="purple" strokeWidth=".5" fill="violet" />
-                            </Svg> */}
+                                <AGRISVG height={60} width={60} />
                             <Text style={dashboardStyles.mainText}>{item.mainText}</Text>
                             <Text style={dashboardStyles.subText}>{item.subText}</Text>
                         </TouchableOpacity>
