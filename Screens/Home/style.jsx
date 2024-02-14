@@ -19,28 +19,17 @@ export const dashboardStyles = StyleSheet.create({
         fontSize: 16,
     },
 
-    // Styliser la flatlist
+    // Styliser la main flatlist
     scrollableList: {
         paddingHorizontal: PADDING.horizontal,
         paddingVertical: PADDING.horizontal,
     },
-    scrollableListItem: {
-        flexDirection: 'column',
-        paddingHorizontal: 15,
-        paddingVertical: 15,
-        marginRight: 15,
-        backgroundColor: 'white',
-        elevation: 2,
-        width: 250,
+
+    title:{
+        paddingHorizontal: PADDING.horizontal,
+        paddingVertical: PADDING.horizontal,
     },
-    mainText: {
-        fontWeight: 'bold',
-        fontSize: 16,
-        textAlign: 'center'
+    titleBold:{
+        fontWeight: 'bold'
     },
-    subText:{
-        marginTop: 3,
-        fontSize: 12,
-        textAlign: 'center'
-    }
 }) 
