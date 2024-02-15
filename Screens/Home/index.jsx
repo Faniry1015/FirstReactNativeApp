@@ -1,4 +1,4 @@
-import { View, Text, ScrollView, Image, FlatList } from 'react-native'
+import { View, Text, ScrollView, Image, FlatList, TouchableOpacity } from 'react-native'
 import React from 'react'
 import FaniryImg from '../../assets/images/faniry.jpg'
 import { dashboardStyles } from './style.jsx'
@@ -55,20 +55,21 @@ export const Home = () => {
             {/* Fin Liste des Services*/}
 
             {/* Liste des services offerts */}
-            <View style={dashboardStyles.title}>
+            <View style={dashboardStyles.title_space_between}>
                 <Text style={dashboardStyles.titleBold}>Que recherchez vous à faire ?</Text>
+                <TouchableOpacity style={dashboardStyles.title}>
+                    <Text style={dashboardStyles.link}>Afficher tout</Text>
+                </TouchableOpacity>
             </View>
-            <FlatList
-                data={FakeServiceOffer}
-                key={item => item.id}
-                horizontal={true}
-                showsHorizontalScrollIndicator={false}
-                style={dashboardStyles.scrollableList}
-                renderItem={({ item }) => {
-                    return (
-                        <ServiceOfferItem item={item} />
-                    )
-                }} />
+            <View style={dashboardStyles.serviceOfferContainer}>
+                {FakeServiceOffer.map((service, index) => {
+                    return <TouchableOpacity key={service.id} style={dashboardStyles.serviceCard}>
+                    <Image source={require('./../../assets/images/servicesOfferts/pi.jpg')} style={dashboardStyles.serviceImg} />
+                        <Text>{service.libelle}</Text>
+                    </TouchableOpacity>
+                })}
+            </View>
+
             {/* Fin Liste des services offerts */}
         </ScrollView>
     )

@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { PADDING } from "../../Tools/constantes";
+import { COLORS, PADDING } from "../../Tools/constantes";
 
 export const dashboardStyles = StyleSheet.create({
     header:{
@@ -22,14 +22,49 @@ export const dashboardStyles = StyleSheet.create({
     // Styliser la main flatlist
     scrollableList: {
         paddingHorizontal: PADDING.horizontal,
-        paddingVertical: PADDING.horizontal,
+        paddingVertical: PADDING.vertical,
     },
 
     title:{
         paddingHorizontal: PADDING.horizontal,
-        paddingVertical: PADDING.horizontal,
+        paddingVertical: PADDING.vertical,
     },
     titleBold:{
         fontWeight: 'bold'
     },
+
+    //Styliser afficher tout
+    title_space_between: {
+        paddingHorizontal: PADDING.horizontal,
+        paddingVertical: PADDING.vertical,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center'
+    },
+    link:{
+        color: COLORS.main
+    },
+
+    serviceOfferContainer : {
+        paddingHorizontal: PADDING.horizontal,
+        paddingVertical: PADDING.vertical,
+    },
+    serviceCard: {
+        flex: 1,
+        flexDirection: 'row',
+        alignItems: 'center',
+        backgroundColor: 'white',
+        elevation: 5,
+        padding: 10,
+        paddingHorizontal: PADDING.horizontal,
+        paddingVertical: PADDING.vertical,
+        marginBottom: 20,
+        borderRadius: 10,
+    },
+    serviceImg: {
+        width: 80,
+        height: 80,
+        borderRadius: 80 / 2,
+        marginRight: 25,
+    }
 }) 
