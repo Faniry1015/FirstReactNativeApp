@@ -1,4 +1,4 @@
-export const FakeActivity = [
+export const FakeService = [
     {
         id:1,
         mainText: 'SRA',

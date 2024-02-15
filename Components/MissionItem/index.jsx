@@ -3,7 +3,7 @@ import { Text, TouchableOpacity, View } from 'react-native'
 import AGRISVG from '../../assets/images/svg/planting.svg'
 import { styles } from './style'
 
-export const ActivityItem = ({ item }) => {
+export const MissionItem = ({ item }) => {
   return (
     <TouchableOpacity style={styles.scrollableListItem}>
       <View style={styles.imgContainer}>
@@ -11,7 +11,6 @@ export const ActivityItem = ({ item }) => {
       </View>
       <View style={styles.textContainer}>
         <Text style={styles.mainText}>{item.mainText}</Text>
-        <Text style={styles.subText}>{item.subText}</Text>
       </View>
     </TouchableOpacity>
   )

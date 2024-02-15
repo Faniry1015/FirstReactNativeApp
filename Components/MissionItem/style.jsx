@@ -8,7 +8,7 @@ export const styles = StyleSheet.create({
         paddingVertical: PADDING.horizontal,
     },
     scrollableListItem: {
-        flexDirection: 'row',
+        flexDirection: 'column',
         paddingHorizontal: 15,
         paddingVertical: 15,
         marginRight: 15,
@@ -26,13 +26,7 @@ export const styles = StyleSheet.create({
 
     },
     mainText: {
-        fontWeight: 'bold',
-        fontSize: 16,
+        fontSize: 14,
         textAlign: 'center',
-    },
-    subText:{
-        marginTop: 3,
-        fontSize: 12,
-        textAlign: 'center'
     }
 }) 

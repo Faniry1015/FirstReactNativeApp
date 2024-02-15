@@ -2,11 +2,12 @@ import { View, Text, ScrollView, Image, FlatList } from 'react-native'
 import React from 'react'
 import FaniryImg from '../../assets/images/faniry.jpg'
 import { dashboardStyles } from './style.jsx'
-import { FakeActivity } from '../../fakeData/fakeActivity.jsx'
-import { ActivityItem } from '../../Components/ActivityItem/index.jsx'
-import { ServiceOfferItem } from '../../Components/ServiceOfferItem/index.jsx'
+import { ServiceOfferItem } from '../../Components/ServiceOfferItem'
+import { FakeService } from '../../fakeData/fakeService.jsx'
 import { FakeServiceOffer } from '../../fakeData/fakeServiceOffer.jsx'
-import { ServiceItem } from '../../Components/ServiceItem/index.jsx'
+import { FakeMission } from '../../fakeData/fakeMission.jsx'
+import { ServiceItem } from '../../Components/ServiceItem'
+import { MissionItem } from '../../Components/MissionItem'
 
 
 export const Home = () => {
@@ -19,19 +20,19 @@ export const Home = () => {
             </View>
             {/* Fin du header */}
 
-            {/* Liste des activités */}
+            {/* Mission */}
             <View style={dashboardStyles.title}>
-                <Text style={dashboardStyles.titleBold}>Services au sein de la DRAE Vakinankaratra ?</Text>
+                <Text style={dashboardStyles.titleBold}>Missions de la DRAE</Text>
             </View>
             <FlatList
-                data={FakeActivity}
+                data={FakeMission}
                 key={item => item.id}
                 horizontal={true}
                 showsHorizontalScrollIndicator={false}
                 style={dashboardStyles.scrollableList}
                 renderItem={({ item }) => {
                     return (
-                        <ActivityItem item={item} />
+                        <MissionItem item={item} />
                     )
                 }} />
             {/* Fin Liste des activités */}
@@ -41,7 +42,7 @@ export const Home = () => {
                 <Text style={dashboardStyles.titleBold}>Services au sein de la DRAE Vakinankaratra ?</Text>
             </View>
             <FlatList
-                data={FakeActivity}
+                data={FakeService}
                 key={item => item.id}
                 horizontal={true}
                 showsHorizontalScrollIndicator={false}
