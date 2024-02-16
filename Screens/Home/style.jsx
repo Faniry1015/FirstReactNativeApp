@@ -36,7 +36,6 @@ export const dashboardStyles = StyleSheet.create({
     //Styliser afficher tout
     title_space_between: {
         paddingHorizontal: PADDING.horizontal,
-        paddingVertical: PADDING.vertical,
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center'
