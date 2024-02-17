@@ -1,10 +1,17 @@
 import { View, Text } from 'react-native'
-import React from 'react'
+import React, { useEffect } from 'react'
 
-export const MessageDetails = () => {
+export const MessageDetails = ({route, navigation}) => {
+
+  const {item} = route.params
+
+  useEffect(() => {
+    navigation.setOptions({title: item.fullname})
+  })
+
   return (
     <View>
-      <Text>index</Text>
+      <Text>{item.lastMessage}</Text>
     </View>
   )
 }

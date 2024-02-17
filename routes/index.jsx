@@ -12,8 +12,16 @@ export const Routes = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName='home' screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="home" component={BottomTabs} />
-        <Stack.Screen name="messageDetails" component={MessageDetails} />
+
+        <Stack.Screen 
+        name="home" 
+        component={BottomTabs} />
+
+        <Stack.Screen 
+        name="messageDetails" 
+        component={MessageDetails}
+        options={{headerShown: true }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   )

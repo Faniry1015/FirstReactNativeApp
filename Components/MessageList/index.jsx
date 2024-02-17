@@ -9,7 +9,7 @@ dayjs.extend(relativeTime)
 
 export const MessageList = ({ item, navigation }) => {
   return (
-    <TouchableOpacity style={styles.messageContainer} onPress={() => navigation.navigate('messageDetails')}>
+    <TouchableOpacity style={styles.messageContainer} onPress={() => navigation.navigate('messageDetails', {item})}>
       <Image source={require('./../../assets/images/faniry.jpg')} style={styles.messageImg} />
       <View style={styles.messageInfo}>
         <View style={styles.dateName}>

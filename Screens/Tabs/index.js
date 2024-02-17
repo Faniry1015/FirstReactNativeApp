@@ -28,6 +28,7 @@ export const BottomTabs = () => {
                     ),
                 }}
             />
+
             <Tab.Screen
                 name="messages"
                 component={Messages}
@@ -39,6 +40,7 @@ export const BottomTabs = () => {
                     //   tabBarBadge: 3,
                 }}
             />
+
             <Tab.Screen
                 name="settings"
                 component={Settings}
@@ -49,6 +51,7 @@ export const BottomTabs = () => {
                     ),
                 }}
             />
+            
         </Tab.Navigator>
     );
 }
