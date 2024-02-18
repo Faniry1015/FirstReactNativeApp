@@ -2,6 +2,7 @@ import { View, Text, FlatList } from 'react-native'
 import React, { useEffect } from 'react'
 import { fakeConversation } from '../../fakeData/fakeConversation'
 import { Message } from '../../Components/Message'
+import { MessageInput } from '../../Components/MessageInput'
 
 export const MessageDetails = ({route, navigation}) => {
 
@@ -12,7 +13,7 @@ export const MessageDetails = ({route, navigation}) => {
   })
 
   return (
-    <View>
+    <View style={{flex: 1}}>
       <FlatList 
       data={fakeConversation} 
       keyExtractor={item => item.id}
@@ -20,6 +21,8 @@ export const MessageDetails = ({route, navigation}) => {
         return <Message item={item} />
       }}
       />
+
+      <MessageInput />
     </View>
   )
 }
