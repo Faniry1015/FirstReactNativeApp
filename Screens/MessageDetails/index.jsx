@@ -1,5 +1,7 @@
-import { View, Text } from 'react-native'
+import { View, Text, FlatList } from 'react-native'
 import React, { useEffect } from 'react'
+import { fakeConversation } from '../../fakeData/fakeConversation'
+import { Message } from '../../Components/Message'
 
 export const MessageDetails = ({route, navigation}) => {
 
@@ -11,7 +13,13 @@ export const MessageDetails = ({route, navigation}) => {
 
   return (
     <View>
-      <Text>{item.lastMessage}</Text>
+      <FlatList 
+      data={fakeConversation} 
+      keyExtractor={item => item.id}
+      renderItem={({item}) => {
+        return <Message item={item} />
+      }}
+      />
     </View>
   )
 }
